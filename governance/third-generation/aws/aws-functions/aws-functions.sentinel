@@ -11,6 +11,7 @@ import "types"
 
 ### find_resources_with_standard_tags ###
 find_resources_with_standard_tags = func(resource_types) {
+  print("SRINI: Inside function resource_type")
   resources = filter tfplan.resource_changes as address, rc {
     rc.provider_name matches "(.*)aws$" and
     rc.type in resource_types and
