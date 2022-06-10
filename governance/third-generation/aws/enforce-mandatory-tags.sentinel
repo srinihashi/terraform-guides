@@ -29,9 +29,16 @@ allAWSResourcesWithStandardTags =
 # Warnings will be printed for all violations since the last parameter is true
 violatingAWSResources =
         plan.filter_attribute_not_contains_list(allAWSResourcesWithStandardTags,
+                        "tags", mandatory_tags, true)
+
+# Filter to AWS resources with violations
+# Warnings will be printed for all violations since the last parameter is true
+violatingAWSResources_tags_all =
+        plan.filter_attribute_not_contains_list(allAWSResourcesWithStandardTags,
                         "tags_all", mandatory_tags, true)
+
 
 # Main rule
 main = rule {
-  length(violatingAWSResources["messages"]) is 0
+  (length(violatingAWSResources["messages"]) is 0) or (length(violatingAWSResources_tags_all["messages"] is 0)
 }
