@@ -387,6 +387,10 @@ filter_attribute_in_list = func(resources, attr, forbidden, prtmsg) {
 # Set prtmsg to `true` (without quotes) if you want to print violation messages.
 # Resources should be derived by applying filters to tfplan.resource_changes.
 filter_attribute_not_contains_list = func(resources, attr, required, prtmsg) {
+print ("SRINI - attr: ", attr)
+print ("SRINI - required: ", required)
+print ("SRINI - prtmsg: ", prtmsg)
+
   violators = {}
   messages = {}
   for resources as address, rc {
