@@ -18,7 +18,7 @@ policy "enforce-mandatory-tags" {
   source = "./enforce-mandatory-tags.sentinel"
   enforcement_level = "advisory"
 }
-/****
+
 policy "protect-against-rds-instance-deletion" {
   source = "./protect-against-rds-instance-deletion.sentinel"
   enforcement_level = "advisory"
@@ -133,4 +133,3 @@ policy "validate-providers-from-desired-regions" {
   source = "./validate-providers-from-desired-regions.sentinel"
   enforcement_level = "advisory"
 }
-****/
