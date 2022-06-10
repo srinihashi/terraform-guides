@@ -40,5 +40,5 @@ violatingAWSResources_tags_all =
 
 # Main rule
 main = rule {
-  (length(violatingAWSResources["messages"]) is 0) or (length(violatingAWSResources_tags_all["messages"] is 0)
+  (length(violatingAWSResources["messages"]) is 0) or (length(violatingAWSResources_tags_all["messages"]) is 0)
 }
